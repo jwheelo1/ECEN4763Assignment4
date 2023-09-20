@@ -2,7 +2,7 @@
 
 ## Assignment Description
 
-In this assignment you will create 2 search classes. A class for an AVL Tree and a Binary Search Tree. Please follow the guidelines located in each README.md.
+In this assignment you will create a class that implements AVL Trees. Please follow the guidelines located in each README.md.
 
 ## Goal
 
@@ -23,9 +23,8 @@ The main goal for this assignment is to learn how to create self balancing searc
 ### Student UTs
 
 - Your Unit Tests account for 20% of the overall grade for this assignment.
-- There must be at least 56 UTs for this assignment (every UT missed is an automatic -1)
+- There must be at least 14 UTs for this assignment (every UT missed is an automatic -1)
     - 14 UTs for AVL Tree
-    - 14 UTs for AVL Tree Search
 - All unit tests belong in the test folder and each file must begin with test i.e. (test_array.py)
 
 ### Code Coverage

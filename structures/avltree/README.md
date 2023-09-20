@@ -34,6 +34,8 @@ AVL tree is a self balancing binary tree. The difference of heights of the left 
 - The function get_root(self) returns the root of the tree.
 - The function remove(self, val) removes a value from the tree and returns the value removed or None if not in the tree. The balance of the tree should be maintained.
 - The function insert(self, val) inserts a value into the tree and returns True if successful, False otherwise. The balance of the tree should be maintained.
+- The function find(self, value) finds the value in the avl tree, and returns True if the value was found and False otherwise.
+- The function is_balanced(self) returns True if the tree is balanced and False otherwise.
 - The function height(self) returns the height of the tree
 - The function min(self) returns the minimum value present in the tree
 - The function max(self) returns the maximum value present in the tree
@@ -43,16 +45,7 @@ AVL tree is a self balancing binary tree. The difference of heights of the left 
 
 ## Tests
 
-- Insertion and deletion of values from the node
-- Tests to check that the tree is balanced after various operations
-- Test to check the tree height
-- Checks to see if the tree is empty
-- Tests to obtain minimum and maximum values of a tree
-- Obtain space and time complexity
-
-## Corner Cases
-
-- Remove a non-existent value from the tree
+- Check all functions over a range of values and conditions
 
 ## Library
 

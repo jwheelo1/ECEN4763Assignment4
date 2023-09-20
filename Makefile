@@ -21,8 +21,6 @@ clean:
 	rm -rf */__pycache__ # remove compiled python directory
 	rm -rf test/avltree/__pycache__ # remove compiled python directory
 	rm -rf structures/avltree/__pycache__ # remove compiled python directory
-	rm -rf test/avltreesearch/__pycache__ # remove compiled python directory
-	rm -rf search/avltreesearch/__pycache__ # remove compiled python directory
 	rm -f .coverage # clean up file associated with unit test coverage
 	rm -f *.png # clean up pictures from runner
 
@@ -38,13 +36,10 @@ setup: .python-check
 format:
 	@echo "Auto Format to PEP-8 Standards"
 	autopep8 --in-place --aggressive --experimental --max-line-length $(MAX_LINE) --recursive structures/
-	autopep8 --in-place --aggressive --experimental --max-line-length $(MAX_LINE) --recursive search/
 	autopep8 --in-place --aggressive --experimental --max-line-length $(MAX_LINE) --recursive test/
 	@echo "Auto Format to PEP-257 Standards"
 	docformatter --in-place --wrap-summaries $(MAX_LINE) --wrap-descriptions $(MAX_LINE) \
 		--pre-summary-newline --recursive structures/
-	docformatter --in-place --wrap-summaries $(MAX_LINE) --wrap-descriptions $(MAX_LINE) \
-		--pre-summary-newline --recursive search/
 	docformatter --in-place --wrap-summaries $(MAX_LINE) --wrap-descriptions $(MAX_LINE) \
 		--pre-summary-newline --recursive test/
 
@@ -52,19 +47,15 @@ style: .python-check
 	@echo "Check if 'structures' folder matches PEP-8 and PEP-257 guides"
 	pydocstyle structures/
 	pycodestyle structures/ --max-line-length=$(MAX_LINE)
-	@echo "Check if 'search' folder matches PEP-8 and PEP-257 guides"
-	pydocstyle search/
-	pycodestyle search/ --max-line-length=$(MAX_LINE)
 	@echo "Check if 'test' folder matches PEP-8 and PEP-257 guides"
 	pydocstyle test/
 	pycodestyle test/ --max-line-length=$(MAX_LINE)
 	@echo "Run pylint"
 	pylint test/
 	pylint structures/
-	pylint search/
 
 test: clean .python-check
-	coverage run --source=structures,search --omit=*"__init__.py" -m unittest -v
+	coverage run --source=structures --omit=*"__init__.py" -m unittest -v
 
 coverage: test
 	coverage json
