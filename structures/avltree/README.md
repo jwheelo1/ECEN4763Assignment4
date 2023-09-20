@@ -18,7 +18,7 @@ AVL tree is a self balancing binary tree. The difference of heights of the left 
 - You must implement a class that handles the below interfaces for an AVL tree.
 - The class name must be called "AVLTree".
 - You must have a Node class called "Node".
-- You must implement at least 14 unit tests.
+- You must implement at least 20 unit tests.
 - Must get a 10/10 when running "make style"
 - Your unit tests must reach 100% code coverage
 
