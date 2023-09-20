@@ -24,9 +24,8 @@ AVL tree is a self balancing binary tree. The difference of heights of the left 
 
 ## Node Interface
 
-- The constructor __init__(self, value, right=None, left=None, height=None) should set all class variables to those passed.
-- The function get_height(self) returns the height variable of the node.
-- The function set_height(self, height) sets the height variable of the node to height.
+- The Node class is helpful for implementing the AVL Tree.
+- You can choose how to organize your node class.
 
 ## AVLTree Interface
 
